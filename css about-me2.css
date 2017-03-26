@@ -1,0 +1,116 @@
+* {
+	box-sizing: border-box;
+	
+}
+body {background: url("images/giantscauseway.jpg") center center fixed;
+	background-repeat: no-repeat;
+	background-size: cover;
+
+}
+
+.header-section{
+	display: block;
+	width:100%;
+	height:35%;
+	background: rgba(0, 33, 86, .2);
+}
+
+.header-photo{
+	display: block;
+	height: 130px;
+	width: 165px;
+	margin-top: 0px;
+	margin-bottom: 0px;
+	margin-left: auto;
+	margin-right: auto;
+	border: 4px solid #FFF;
+	border-radius: 50%;
+	padding: 2px;
+}
+
+h1 {
+	font-family: 'Cinzel Decorative', cursive;
+	text-align: center;
+	color: #FFF;
+	
+}
+
+.main-section {
+	width: 100%;
+	height:65%;
+
+}
+
+
+.about-me-paragraph{
+	width: 300px;
+	margin-top: 0;
+	margin-bottom: auto;
+	margin-left: auto;
+	margin-right: auto;
+	background: rgba(0, 72, 117, .5);
+
+}
+
+p {
+	display: block;
+	font-family: 'Pathway Gothic One', sans-serif;
+	font-size: 22px;
+	line-height: 17px;
+	color: #FFFFFF;
+	text-align: center;
+	margin-top: 8px;
+	margin-bottom: 5px;
+	}
+
+.gallery {
+	width: 100%;
+	max-width: 1020px;
+	margin: auto;
+}
+
+.gallery-image {
+	float: left;
+	width: 400px;
+	height: 400px;
+	margin: 8px;
+	border: 4px solid #FFF;
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+
+.gallery-image:nth child(8n+1) {background-image: url("images/boat.jpg") center center fixed;
+}
+
+.gallery-image:nth child(8n+2) {background-image: url("images/anchor.jpg") center center fixed;
+}
+
+.gallery-image:nth child(8n+3) {background-image: url("images/monastic.jpg") center center fixed;
+}
+
+.gallery-image:nth child(8n+4) {background-image: url("images/herdingsheep.jpg") center center fixed; 
+}
+
+.gallery-image:nth child(8n+5) {background-image: url("images/killarneyboy.jpg") center center fixed;
+}
+
+.gallery-image:nth child(8n+6) {background-image: url("images/newgrange.jpg") center center fixed;
+}
+
+.gallery-image:nth child(8n+7) {background-image: url("images/wicklowdog.jpg") center center fixed;
+}
+
+.gallery-image:nth child(8n+8) {background-image: url("images/ringofkerrymananddog.jpg") center center fixed;
+}
+
+@media all and (max-width: 1020px) {
+  .gallery-image {
+    float: none;
+    margin: 10px auto;
+  }
+}
+
+@media all and (max-width: 500px) {
+  .gallery-image {
+    border: none;
+
