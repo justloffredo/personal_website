@@ -41,28 +41,28 @@ h1 {
 	background-size: cover;
 }
 
-.gallery-image:nth child(8n+1) {background-image: url("images/boat.jpg") center center fixed;
+.gallery-image:nth child(8n+1) {background: url("images/boat.jpg") center center fixed;
 }
 
-.gallery-image:nth child(8n+2) {background-image: url("images/anchor.jpg") center center fixed;
+.gallery-image:nth child(8n+2) {background: url("images/anchor.jpg") center center fixed;
 }
 
-.gallery-image:nth child(8n+3) {background-image: url("images/monastic.jpg") center center fixed;
+.gallery-image:nth child(8n+3) {background: url("images/monastic.jpg") center center fixed;
 }
 
-.gallery-image:nth child(8n+4) {background-image: url("images/herdingsheep.jpg") center center fixed; 
+.gallery-image:nth child(8n+4) {background: url("images/herdingsheep.jpg") center center fixed; 
 }
 
-.gallery-image:nth child(8n+5) {background-image: url("images/killarneyboy.jpg") center center fixed;
+.gallery-image:nth child(8n+5) {background: url("images/killarneyboy.jpg") center center fixed;
 }
 
-.gallery-image:nth child(8n+6) {background-image: url("images/newgrange.jpg") center center fixed;
+.gallery-image:nth child(8n+6) {background: url("images/newgrange.jpg") center center fixed;
 }
 
-.gallery-image:nth child(8n+7) {background-image: url("images/wicklowdog.jpg") center center fixed;
+.gallery-image:nth child(8n+7) {background: url("images/wicklowdog.jpg") center center fixed;
 }
 
-.gallery-image:nth child(8n+8) {background-image: url("images/ringofkerrymananddog.jpg") center center fixed;
+.gallery-image:nth child(8n+8) {background: url("images/ringofkerrymananddog.jpg") center center fixed;
 }
 
 @media all and (max-width: 1020px) {
