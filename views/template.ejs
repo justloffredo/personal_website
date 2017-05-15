@@ -1,4 +1,4 @@
-<!DOCTYPEhtml/>
+<!DOCTYPE HTML/>
 <html>
   <head>
     <title>Justin Loffredo</title>
@@ -6,28 +6,31 @@
 		<link rel="stylesheet" types="text.css" href="/css/cssReset.css">
     <link rel="stylesheet" types="text.css" href= "/css/personal_website.css">
   <link href="https://fonts.googleapis.com/css?family=Playfair+Display" rel="stylesheet">
-
-
-
-	</head>
+</head>
 
   <body>
 
 	<div class = "template">
-		<a href= "/" class= "template-header-section">
+		<div class="template-header">
 
-      	<h1><Justin Loffredo></h1>
-      	<div class= "nav">
-
+      	<h1>Justin Loffredo</h1>
+      	<div class= "nav-section">
+          <ul class= "nav-links">
+            <% for (let i = 0; i < links.length; i++) { %>
+              <a class = "nav-links-link" href= "<%= links[i].href %>">
+                <%= links[i].text%>
+              </a>
+            <% } %>
+          </ul>
 				</div>
-		</a>
+		</div>
 
 
 		<main class= "template-main">
 			<%- include("pages/" + page, args);%>
-		<main>
+		</main>
 
-		<footer class= "template-footer">Justin Loffredo's Site</footer>
+    <footer class= "template-footer">Justin Loffredo's Site</footer>
 	</div>
 
 

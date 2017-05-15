@@ -16,11 +16,32 @@ body {
 
 }
 
-.header-section{
-	position:relative;
+.template {
+text-align: center;
+min-height: 100%;
+width: 100%;
+margin: auto;
+}
+
+.template-header{
+	position: relative;
 	width:100%;
 	height:75px;
 	background: rgba(0, 33, 86, .2);
+}
+.template-header:hover {
+color: #999;
+}
+
+.template-footer {
+right: 0;
+bottom: -30px;
+left: 0;
+width: 100%;
+height: 75px;
+padding: 1rem;
+background-color: rgba(0,33,86,.2);
+text-align: center;
 }
 
 h1 {
@@ -36,7 +57,7 @@ h1 {
 	color: #FFF;
 }
 
-.nav {
+.nav-section {
 	position: absolute;
 	height: 75px;
 	width: 1110px;
@@ -45,39 +66,32 @@ h1 {
 }
 
 
-ul {
-	list-style-type: none;
-	padding: 0;
-	margin: 0;
-	overflow: hidden;
-}
+.nav-links {
+		list-style-type: none;
+		padding: 0;
+		margin: 0;
+		overflow: hidden;
+	}
 
-li {
-display:block;
+.nav-links-link {
+display: inline-block;
 float: right;
 padding: 8px;
 height: 75px;
 width: 180px;
 font-style: oblique;
 font-size: 15px;
-/*text-shadow: -1px -1px 1px #fff, 1px 1px 1px #000;*/
 line-height: 75px;
 text-align: center;
 font-family: 'Playfair Display', serif;
 color: #FFF;
 }
 
-li a {
-	color: #FFF;
+.template-main {
+	width: 100%;
 
 }
-
-
-
-
-
 .main-section {
-	position:relative;
 	width: 100%;
 	height:65%;
 
@@ -202,10 +216,3 @@ p {
 	.gallery-image.ringofkerrymananddog {
 	background-image: url("/images/ringOfKerryManAndDog.jpg");
 	}
-
-	footer {
-			display: block;
-			width:100%;
-			height:75px;
-			background: rgba(0, 33, 86, .2);
-		}

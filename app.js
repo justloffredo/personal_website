@@ -5,33 +5,32 @@ app.set("view engine", "ejs");
 app.use(express.static("assets"));
 
 
-function renderTemplate(res, page, title, args) {
+function renderTemplate(res, page, title, args, links) {
 	return res.render("template", {
 		page: page,
 		title: title,
 		args: args,
-		navbaritems: [{
+		links: [{
 			text: "Biography",
-			href: "/about_me",
+			href: "/biography",
 		}, {
-			text: "Images",
-			href: "/image_gallery",
+			text: "Gallery",
+			href: "/gallery",
 		}, {
 			text: "Home",
-			href: "/about_me",
+			href: "/biography",
 		}],
 	});
 }
 
 
 app.get("/biography", function(req, res) {
-	renderTemplate(res, "/about_me", "Biography", {
+	renderTemplate(res, "about_me", "Biography", {
 	});
 });
 
 app.get("/gallery", function(req, res) {
-	renderTemplate(res, "/image_gallery", {
-		title: "Images",
+	renderTemplate(res, "image_gallery", "Images", {
 
 	});
 });
