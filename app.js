@@ -47,13 +47,14 @@ app.get("/gallery", function(req, res) {
 app.get("/country_info/:code", function(req, res) {
 	var country = countries[req.params.code];
 	console.log(countries);
-	res.render("pages/country_info.ejs",country);
-	renderTemplate(res, "country_info", "Country", {
 
+	if (!country) {
+		res.status(404);
+		return res.send("This code is not recognized");
+	}
 
-
-
-	});
+	// res.render("pages/country_info.ejs",country);
+	renderTemplate(res, "country_info", "Country", country);
 });
 
 

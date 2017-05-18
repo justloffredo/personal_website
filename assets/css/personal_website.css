@@ -94,7 +94,7 @@ color: #FFF;
 
 }
 
-
+/*Biography Page*/
 .about-me-paragraph{
 	position: relative;
 	margin-top: 50px;
@@ -118,7 +118,7 @@ p {
 	margin-top: 8px;
 	margin-bottom: 5px;
 	}
-
+/* Gallery Page CSS */
 	.gallery {
 		position: relative;
 		width: 100%;
