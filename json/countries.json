@@ -1,11 +1,11 @@
 {
 "AFG": {
-"name": "Afghanistan",
-"nativeName": "افغانستان",
-"code": "AFG",
-"population": 26023100,
-"region": "Asia",
-"flag": "https://restcountries.eu/data/afg.svg"
+	"name": "Afghanistan",
+	"nativeName": "افغانستان",
+	"code": "AFG",
+	"population": 26023100,
+	"region": "Asia",
+	"flag": "https://restcountries.eu/data/afg.svg"
 },
 "ALA": {
 "name": "Åland Islands",
