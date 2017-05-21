@@ -7,12 +7,12 @@ const router= express.Router();
 
 
 router.get("/country_info/:code", function(req, res) {
-	var country = countries[req.params.code];
+	var country = countries[req.params.code.toUpperCase()];
 	console.log(countries);
 
 	if (!country) {
 		res.status(404);
-		renderTemplate(res,"404");
+		return renderTemplate(res,"404");
 	}
 
 	// res.render("pages/country_info.ejs",country);
