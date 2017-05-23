@@ -1,6 +1,6 @@
 const express= require("express");
 const router= express.Router();
-const renderTemplate = require("../utility/renderTemplate.js")
+const renderTemplate = require("../utility/renderTemplate.js");
 
 
 
@@ -15,9 +15,6 @@ router.get("/gallery", function(req, res) {
 	});
 });
 
-router.get("/404", function(req,res) {
-	renderTemplate(res, "404", "Unexpected Error")
-	});
 
 
 module.exports = router;
