@@ -4,17 +4,17 @@ function renderTemplate(res, page, title, args, links) {
 		title: title,
 		args: args,
 		links: [{
+			text: "Travel",
+			href: "/travel",
+		},{
 			text: "Biography",
-			href: "/biography",
+			href: "/",
 		}, {
 			text: "Gallery",
 			href: "/gallery",
 		}, {
 			text: "Home",
-			href: "/biography",
-		}, {
-			text: "Country Info",
-			href: "/country_info",
+			href: "/",
 		}],
 	});
 }

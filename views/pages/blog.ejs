@@ -1,0 +1,9 @@
+<% for(let i = 0; i < place.length; i++) { %>
+				<tr>
+					<p class="place"><%= place[i].place %></p>
+					<p class="description"><%= place[i].description %></p>
+					<p class="dateTo"><%= place[i].date_to %></p>
+					<p class="dateFrom"><%= place[i].date_for %></p>
+					<img class="image" src= "<%= place[i].image>" %></img>
+				</tr>
+			<%}%>

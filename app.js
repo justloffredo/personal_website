@@ -1,4 +1,6 @@
+require("dotenv").config();
 const express = require("express");
+const sql = require("./utility/sql.js")
 const personalWebsiteRouter = require("./Routes/personal_website.js");
 const countryAppRouter = require("./Routes/country_app.js");
 const renderTemplate = require("./utility/renderTemplate.js");
@@ -18,6 +20,12 @@ app.get("*", function(req, res) {
 });
 
 
-app.listen(3000, function() {
-	console.log("Your server is available at 3000");
+sql.sync() .then(function() {
+	console.log("Database Initialized!");
+
+const port = process.env.PORT || 3000;
+
+app.listen(port, function() {
+	console.log("Listening at http://localhost:" + port);
+	});
 });
