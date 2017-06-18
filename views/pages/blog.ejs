@@ -1,9 +1,14 @@
-<% for(let i = 0; i < place.length; i++) { %>
-				<tr>
-					<p class="place"><%= place[i].place %></p>
-					<p class="description"><%= place[i].description %></p>
-					<p class="dateTo"><%= place[i].date_to %></p>
-					<p class="dateFrom"><%= place[i].date_for %></p>
-					<img class="image" src= "<%= place[i].image>" %></img>
-				</tr>
+<% for(let i = 0; i < posts.length; i++) { %>
+			<div class = site>
+					<h1 class="place"><%= posts[i].place %></h1>
+				<div class = dates
+					<li class="dateTo"> From <%= posts[i].from %></li>
+					<li class="dateFrom"> To <%= posts[i].to %></li>
+				</div>
+					<p class="description"><%= posts[i].description %></p>
+					<a href="<%= posts[i].href%>">
+						<img class="blogImage" src ="venice.jpg">
+					</a>
+			</div>
+
 			<%}%>

@@ -30,17 +30,11 @@ margin: auto;
 	height:75px;
 	background: rgba(255, 255, 255, .9);
 }
-.template-content {
-	flex: 1 0 auto;
-}
 
 
 .template-footer {
-  bottom: 0;
-  height: 50px;
-	margin-top: -50px;
+  height: 75px;
   width: 100%;
-	padding: 1rem;
 	background: rgba(255, 255, 255, .9);
 	text-align: center;
 	clear:both;
@@ -48,8 +42,8 @@ margin: auto;
 
 .template-footer-linkedin{
 	float: left;
-	width: 20px;
-	height: 20px;
+	width: 35px;
+	height: 35px;
 	display: inline-block;
 
 
@@ -59,8 +53,9 @@ margin: auto;
 	float: right;
 	display: inline-block;
 	padding: 10px;
-	font-family: 'Playfair Display', serif;
-	font-size: 22px;
+	font-family: 'Humger';
+	font-size: 30px;
+	color: rgb(4, 25, 58);
 	line-height: 25.5px;
 	letter-spacing: .32px;
 	text-align: center;
@@ -72,12 +67,11 @@ margin: auto;
 	position: absolute;
 	height: 75px;
 	width: 240px;
-	font-style: oblique;
 	font-size: 20px;
 	text-shadow: 1px .75px 0px #fff, 2.25px 2px 0px rgba(0,0,0,0.15);
 	line-height: 75px;
 	text-align: center;
-	font-family: 'Playfair Display', serif;
+	font-family: 'Humger', serif;
 	color: rgb(0,0,0);
 }
 
@@ -103,12 +97,11 @@ float: right;
 padding: 8px;
 height: 75px;
 width: 180px;
-color: rgb(0,0,0);
-font-style: oblique;
+color: rgb(4, 25, 58);
 font-size: 15px;
 line-height: 75px;
 text-align: center;
-font-family: 'Playfair Display', serif;
+font-family: 'Humger';
 
 }
 
@@ -122,13 +115,29 @@ font-family: 'Playfair Display', serif;
 
 }
 
+/*Home Page*/
+
+
+
+.homeTitle {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	color: rgb(4, 25, 58);
+	font-size: 70px;
+	font-family: Humger;
+}
+
+
+
 /*Biography Page*/
 .about-me-paragraph{
 	position: relative;
 	margin-top: 50px;
 	margin-bottom: 25px;
 	padding: 10px;
-	border-radius: 5%;
+	border-radius: 2%;
 	top:25%;
 	width: 400px;
 	left:50%;
@@ -208,7 +217,7 @@ p {
 	@media all and (max-width: 500px) {
 	  .gallery-image {
 	    border: none;
-
+			padding: 10px;
 			width:100vw;
 			height:100vw;
 		}
@@ -313,17 +322,17 @@ input[type=text]:	focus {
     border: 3px solid #555;
 }
 input[type=text] {
-    width: 100%;
+    width: 90%;
     padding: 12px 20px;
-    margin: 8px 0;
+    margin: auto;
     box-sizing: border-box;
 		text-align: center;
 		font-size: 15px;
 	}
 	input[type=password] {
-	    width: 100%;
+	    width: 90%;
 	    padding: 12px 20px;
-	    margin: 8px 0;
+	    margin: auto;
 	    box-sizing: border-box;
 			text-align: center;
 			font-size: 15px;
@@ -341,7 +350,57 @@ input[type=text] {
 
 	.form-button {
 		display: block;
-		width: 100%;
+		width: 90%;
+		margin: auto;
 		padding: 10px;
 		font-size: 15px;
+	}
+
+	textarea {
+		resize:none;
+		width: 90%;
+		margin: auto;
+		height: 150px;
+	}
+
+	/*Blog CSS*/
+
+	.site {
+		width: 90%;
+		background-color: rgba(255, 255, 255, 0.5);
+		margin: auto;
+		padding: 10px;
+	}
+
+	.place {
+		font-size: 26px;
+		text-align: center;
+		padding: 10px;
+	}
+
+	.dates {
+		font-size: 15px;
+
+	}
+
+	.dateTo {
+		display: inline-block;
+
+
+	}
+
+	.dateFrom {
+		display: inline-block;
+
+	}
+
+	.description {
+
+	}
+
+	.blogImage {
+		width: 500px;
+		height: 331px;
+
+
 	}

@@ -15,12 +15,16 @@ module.exports = sql.define("post", {
 		type: Sequelize.STRING(5000),
 		notNull: true,
 	},
-	dateTo: {
+	from: {
 		type: Sequelize.DATE,
 		notNull: true,
 	},
-	dateFrom: {
+	to: {
 		type: Sequelize.DATE,
+		notNull: true,
+	},
+	href : {
+		type: Sequelize.STRING(100),
 		notNull: true,
 	},
 	image : {

@@ -1,46 +1,60 @@
 
-const express= require("express");
-const router= express.Router();
+require('dotenv').config();
+const express = require ("express");
+const router = express.Router();
 const renderTemplate = require("../utility/renderTemplate.js");
 const BodyParser = require("body-parser");
 const multer = require("multer");
-const uploads = ({dest: "uploads/"});
+const uploads = ({ dest: "uploads/" });
 const loginFormMW = require("../middleware/loginForm.js");
-const Blog = require("../utility/blog.js");
+// const Blog = require("../utility/blog.js");
+const Posts = require("../models/posts.js");
+
+
 
 router.get("/", function(req, res) {
-	renderTemplate(res, "about_me", "Biography", {
+	renderTemplate(res, "Home", "Home", {
 	});
 });
 
-router.get("/travel", function(req, res) {
-	Blog.getAll().then(function(posts) {
+router.get("/biography", function(req,res) {
+	renderTemplate(res, "about_me", "Biography", {
+
+	});
+
+});
+
+router.get("/travel", function(req, res, posts) {
+	Posts.findAll().then(function(posts) {
 		renderTemplate(res, "blog", "Travel", {
 			posts: posts,
 		});
 	});
 });
 
-router.post("/POST", function(req,res) {
 
-})
+
+
+router.post("/form", function(req,res) {
+	Posts.create({ place: req.body.name, description: req.body.description, from: req.body.from, to: req.body.to, href: req.body.href, image: req.body.img })
+	.then(function() {
+		renderTemplate(res, "form", "Form", {
+		});
+	});
+});
+
+
 router.get("/gallery", function(req, res) {
 	renderTemplate(res, "image_gallery", "Images", {
 
 	});
 });
 
- router.get("/form", //loginFormMW(process.env.user, process.env.password),//
- function(req,res) {
+ router.get("/form", function(req, res) {
 	renderTemplate(res, "form", "Blog Post Form", {
 	});
 });
 
-router.get("/login", function(req, res) {
-	renderTemplate(res, "login", "Login", {
-
-	});
-});
 
 
 
