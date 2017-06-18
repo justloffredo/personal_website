@@ -24,7 +24,7 @@ module.exports = sql.define("post", {
 		notNull: true,
 	},
 	href : {
-		type: Sequelize.STRING(100),
+		type: Sequelize.STRING(1000),
 		notNull: true,
 	},
 	image : {

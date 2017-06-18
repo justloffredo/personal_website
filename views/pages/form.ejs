@@ -11,8 +11,12 @@
 	<input type = "DATE" name = "to"><br>
 	<input type = "text" name = "href"
 	placeholder = "Enter the HREF to Flickr"><br>
-	<input type = "text" name = "img"
-	placeholder = "Enter the IMG Source"><br>
+	<select>
+		<% for(let i=0; i < items.length; i++) { %>
+			<option value=<%=items[i]%>> <%=items[i]%> </option>
+		<% } %>
+
+	</select>
 
 	<button class= "form-button">Submit</button>
 

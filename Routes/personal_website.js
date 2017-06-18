@@ -5,9 +5,9 @@ const router = express.Router();
 const renderTemplate = require("../utility/renderTemplate.js");
 const BodyParser = require("body-parser");
 const multer = require("multer");
-const uploads = ({ dest: "uploads/" });
-const loginFormMW = require("../middleware/loginForm.js");
-// const Blog = require("../utility/blog.js");
+const fs = require('fs');
+// const loginFormMW = //require("../middleware/loginForm.js");
+const Blog = require("../utility/blog.js");
 const Posts = require("../models/posts.js");
 
 
@@ -36,10 +36,21 @@ router.get("/travel", function(req, res, posts) {
 
 
 router.post("/form", function(req,res) {
-	Posts.create({ place: req.body.name, description: req.body.description, from: req.body.from, to: req.body.to, href: req.body.href, image: req.body.img })
+	Posts.create({
+		 place: req.body.name,
+		 description: req.body.description,
+		 from: req.body.from,
+		 to: req.body.to,
+		 href: req.body.href,
+		 image: req.body.img })
 	.then(function() {
-		renderTemplate(res, "form", "Form", {
-		});
+		fs.readdir('./assets/images', function(err, items) {
+	 	 	console.log(items);
+	 	 	console.log('BODY', req.body);
+	 	 	renderTemplate(res, "form", "BLOG POST FORM", {
+	 	 		items: items,
+	 	 	});
+  	});
 	});
 });
 
@@ -51,8 +62,13 @@ router.get("/gallery", function(req, res) {
 });
 
  router.get("/form", function(req, res) {
-	renderTemplate(res, "form", "Blog Post Form", {
-	});
+	 fs.readdir('./assets/images', function(err, items) {
+	 	console.log(items);
+	 	console.log('BODY', req.body);
+	 	renderTemplate(res, "form", "BLOG POST FORM", {
+	 		items: items,
+	 	});
+ 	});
 });
 
 
