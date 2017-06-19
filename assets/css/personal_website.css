@@ -307,6 +307,15 @@ p {
 
 	/*Form CSS*/
 
+	.form-header {
+		padding: 20px;
+		font-size: 24px;
+		color: #FFF;
+		width: 100%;
+		margin: 0;
+		font-family: 'Lora', serif;
+		}
+
 .form {
 
 	max-width: 340px;
@@ -337,18 +346,34 @@ input[type=text] {
 			text-align: center;
 			font-size: 15px;
 		}
+		.select-style {
+    border: 1px solid #ccc;
+    width: 120px;
+    border-radius: 3px;
+    overflow: hidden;
+    background: #fafafa url("img/icon-select.png") no-repeat 90% 50%;
+}
+.select-style select {
+    padding: 5px 8px;
+    width: 130%;
+    border: none;
+    box-shadow: none;
+    background: transparent;
+    background-image: none;
+    -webkit-appearance: none;
+}
 
+.select-style select:focus {
+    outline: none;
+}
+input[type="date"], focus {
+    color: #95a5a6;
+    box-shadow: none;
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+}
 
-.form-header {
-	padding-top: 10px;
-	font-size: 24px;
-	color: #FFF;
-	width: 100%;
-	margin: 0;
-	font-family: 'Lora', serif;
-	}
-
-	.form-button {
+.form-button {
 		display: block;
 		width: 90%;
 		margin: auto;
