@@ -44,13 +44,13 @@ router.post("/form", function(req,res) {
 		 href: req.body.href,
 		 image: req.body.img })
 	.then(function() {
-		fs.readdir('./assets/images', function(err, images) {
-	 	 	console.log(images);
-	 	 	console.log('BODY', req.body);
+		// fs.readdir('./assets/images', function(err, images) {
+		// 	 	console.log(images);
+		// 	 	console.log('BODY', req.body);
 	 	 	res.redirect("/travel");
   	});
 	});
-});
+
 
 
 router.get("/gallery", function(req, res) {
@@ -61,6 +61,7 @@ router.get("/gallery", function(req, res) {
 
  router.get("/form", function(req, res) {
 	 fs.readdir('./assets/images', function(err, images) {
+		 if(err)
 	 	console.log(images);
 	 	console.log('BODY', req.body);
 	 	renderTemplate(res, "form", "BLOG POST FORM", {

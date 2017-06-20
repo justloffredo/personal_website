@@ -7,6 +7,14 @@ module.exports = sql.define("post", {
 		autoIncrement: true,
 		primaryKey: true,
 	},
+	user: {
+		type: Sequelize.STRING(100),
+		notNull: true,
+	},
+	password: {
+		type: Sequelize.STRING(100),
+		notNull: true,
+	},
 	place: {
 		type: Sequelize.STRING(100),
 		notNull: true,
