@@ -24,12 +24,11 @@ app.get("*", function(req, res) {
 });
 
 
-sql.sync() .then(function() {
-	console.log("Database Initialized!");
+sql.sync().then(function() {
+	console.log("Database synced");
+	const port = process.env.PORT || 3000;
 
-const port = process.env.PORT || 3000;
-
-app.listen(port, function() {
-	console.log("Listening at http://localhost:" + port);
+	app.listen(port, function() {
+		console.log("Listening at http://localhost:" + port);
 	});
 });

@@ -1,12 +1,11 @@
-const Sequelize = require("sequelize");
 
+const Sequelize = require("sequelize");
 
 let sql;
 
 if (process.env.DATABASE_URL) {
-	sql = new Sequelize(process.env.Database_URL);
+	sql = new Sequelize(process.env.DATABASE_URL);
 }
-
 else {
 	sql = new Sequelize({
 		database: process.env.DB_NAME,
