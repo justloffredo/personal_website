@@ -13,7 +13,7 @@ const Posts = require("../models/posts.js");
 
 
 router.get("/", function(req, res) {
-	renderTemplate(res, "Home", "Home", {
+	renderTemplate(res, "home", "Home", {
 	});
 });
 
