@@ -1,4 +1,4 @@
-function renderTemplate(res, page, title, args, links) {
+function renderTemplate(res, page, title, args, links,message) {
 	return res.render("template", {
 		page: page,
 		title: title,
@@ -16,6 +16,7 @@ function renderTemplate(res, page, title, args, links) {
 			text: "HOME",
 			href: "/",
 		}],
+		message: message,
 	});
 }
 

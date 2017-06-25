@@ -36,6 +36,7 @@ router.get("/travel", function(req, res, posts) {
 
 
 router.post("/form", function(req,res) {
+	let message = "";
 	Posts.create({
 		 place: req.body.name,
 		 description: req.body.description,
@@ -44,13 +45,21 @@ router.post("/form", function(req,res) {
 		 href: req.body.href,
 		 image: req.body.img })
 	.then(function() {
-		// fs.readdir('./assets/images', function(err, images) {
-		// 	 	console.log(images);
-		// 	 	console.log('BODY', req.body);
 	 	 	res.redirect("/travel");
-  	});
+  	})
+		.catch(function(err) {
+			message = "Please Ensure All Fields Are Filled In Properly";
+			fs.readdir('./assets/images', function(err, images) {
+	 		 if(err)
+	 	 	console.log(images);
+	 	 	console.log('BODY', req.body);
+			renderTemplate(res, "form", "Form", {
+				message: message,
+				images: images,
+			});
+		});
 	});
-
+});
 
 
 router.get("/gallery", function(req, res) {
@@ -64,7 +73,7 @@ router.get("/gallery", function(req, res) {
 		 if(err)
 	 	console.log(images);
 	 	console.log('BODY', req.body);
-	 	renderTemplate(res, "form", "BLOG POST FORM", {
+	 	renderTemplate(res, "form", "Blog post form", {
 	 		images: images,
 	 	});
  	});

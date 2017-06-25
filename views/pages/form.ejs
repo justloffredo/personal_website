@@ -16,9 +16,13 @@
 		<% for(let i=0; i < images.length; i++) { %>
 			<option value=<%=images[i]%>> <%=images[i]%> </option>
 		<% } %>
-
 	</select>
-</div>
+	</div>
 	<button class= "form-button">Submit</button>
 
 </form>
+
+<% if (message) { %>
+	<p class="form-message"><%- message %></p>
+
+<% } %>

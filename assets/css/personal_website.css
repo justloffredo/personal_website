@@ -388,6 +388,17 @@ input[type="date"], focus {
 		height: 150px;
 	}
 
+	.form-message {
+	height: 75px;
+	font-style: oblique;
+	font-size: 35px;
+	text-shadow: -1px -1px 1px #fff, 1px 1px 1px #000;
+	color: #FFF;
+	line-height: 120px;
+	text-align: center;
+	margin: 15px;
+	}
+
 	/*Blog CSS*/
 
 	.site {
@@ -405,27 +416,18 @@ input[type="date"], focus {
 
 	.dates {
 		font-size: 15px;
-
 	}
 
 	.dateTo {
 		display: inline-block;
-
-
 	}
 
 	.dateFrom {
 		display: inline-block;
-
-	}
-
-	.description {
-
 	}
 
 	.blogImage {
 		width: 500px;
 		height: 331px;
-
-
+		margin: 15px;
 	}
