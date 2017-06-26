@@ -69,11 +69,16 @@ router.get("/gallery", function(req, res) {
 });
 
  router.get("/form", function(req, res) {
-	 fs.readdir('./assets/images', function(err, images) {
+
+	 fs.readdir('./assets/images', function(err, photos) {
+		 function jpgFilter(result) {
+			 return result.includes('jpg');
+	 }
+		 let images = photos.filter(jpgFilter);
 		 if(err)
-	 	console.log(images);
-	 	console.log('BODY', req.body);
-	 	renderTemplate(res, "form", "Blog post form", {
+	 		console.log(images);
+	 		console.log('BODY', req.body);
+	 		renderTemplate(res, "form", "Blog post form", {
 	 		images: images,
 	 	});
  	});
